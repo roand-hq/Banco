@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-concept-banking-logo-png-image_712965.jpg">
+    <title>Perfil 4</title>
+  </head>
+  <body>
+    
+    <!--css-->
+
+    <style>
+
+        body
+        {
+         background-color: cornflowerblue;   
+        }
+        #name {
+            margin-top: 15px;
+        }
+        
+    </style>
+
+    <!--html-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-concept-banking-logo-png-image_712965.jpg" alt="..." height="100">
+          </a>
+         
+          
+        </div>
+      </nav>
+<br><br>
+<div class="container">
+      <div class="card" style="width: 45rem;">
+        <div class="card-body">
+            
+          <h5 class="card-title">Retiro de efectivo</h5>
+          <p class="card-text">
+            
+      <div class="container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="cant" class="form-label">Ingrese la cantidad a retirar:($)</label>
+              <input type="number" class="form-control" id="cant">
+            </div>
+            <div class="mb-3">
+              <label for="nom" class="form-label">Ingrese su  nombre:</label>
+              <input type="text" class="form-control" id="nom">
+            </div>
+            <button type="button" id="calcularBtn" class="btn btn-primary">realizar retiro</button>
+          </div>
+          <p id="name"></p>
+        </div>
+      </div>
+          </p>
+             <br>
+             <br>
+             <div class="container text-center">
+                <div class="row justify-content-center">
+                  <div class=" col-6 col-sm-4">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="alert alert-primary" role="alert">
+                                    <h5>Billetes de 100 $: <span class="badge bg-secondary" id="c100">x</span></h5>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="alert alert-danger" role="alert">
+                                    <h5>Billetes de 50 $: <span class="badge bg-secondary" id="c50">x</span></h5>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="alert alert-info" role="alert">
+                                    <h5>Billetes de 20 $: <span class="badge bg-secondary" id="c20">x</span></h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="alert alert-warning" role="alert">
+                                    <h5>Billetes de 10 $: <span class="badge bg-secondary" id="c10">x</span></h5>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="alert alert-dark" role="alert">
+                                    <h5>Billetes de 5 $: <span class="badge bg-secondary" id="c5">x</span></h5>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="alert alert-success" role="alert">
+                                    <h5>Billetes de 1 $: <span class="badge bg-secondary" id="c1">x</span></h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div></div></div></div></div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script>
+    function Retirar() {
+     let cantidad = document.getElementById("cant").value;
+     let nombre = document.getElementById("nom").value;
+     let c100 = 0;
+     let c50 = 0;
+     let c20 = 0;
+     let c10 = 0;
+     let c5= 0;
+     let Element100 = document.getElementById("c100");
+     let Element50 = document.getElementById("c50");
+     let Element20 = document.getElementById("c20");
+     let Element10 = document.getElementById("c10");
+     let Element5 = document.getElementById("c5");
+     let Element1 = document.getElementById("c1");
+     let nameElement = document.getElementById("name");
+     nameElement.innerHTML = "Hola, "+ nombre + ". Haz retirado $"+ cantidad 
+     nameElement.classList.add("mostrar")
+     nameElement.className = "alert alert-warning mostrar"
+     if(cantidad >=100){
+        c100 = parseInt(cantidad / 100)
+        cantidad = cantidad -(c100 * 100)
+     }
+     if(cantidad >=50){
+        c50 = parseInt(cantidad/50)
+        cantidad = cantidad - (c50 *50)
+     }
+     if(cantidad >=20){
+        c20 = parseInt(cantidad/20)
+        cantidad = cantidad -(c20 * 20)
+     }
+     if(cantidad >=10){
+        c10 = parseInt(cantidad/10)
+        cantidad = cantidad - (c10 * 10)
+     }
+     if(cantidad >= 5){
+        c5 = parseInt(cantidad/5)
+        cantidad = cantidad - (c5 *5)
+     }
+     
+     Element100.innerHTML = c100
+     Element50.innerHTML = c50
+     Element20.innerHTML = c20
+     Element10.innerHTML = c10
+     Element5.innerHTML = c5
+     Element1.innerHTML = cantidad
+    }
+    document.getElementById("calcularBtn").addEventListener("click",Retirar)
+  </script>
+</html>
